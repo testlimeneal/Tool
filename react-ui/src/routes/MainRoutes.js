@@ -16,6 +16,14 @@ const UtilsShadow = Loadable(lazy(() => import('../views/utilities/Shadow')));
 const UtilsMaterialIcons = Loadable(lazy(() => import('../views/utilities/MaterialIcons')));
 const UtilsTablerIcons = Loadable(lazy(() => import('../views/utilities/TablerIcons')));
 
+
+
+
+// assesments routing
+const Assesment = Loadable(lazy(() => import('../views/assesment')));
+const Report = Loadable(lazy(() => import('../views/profile/reports')));
+
+
 // sample page routing
 const SamplePage = Loadable(lazy(() => import('../views/sample-page')));
 
@@ -35,6 +43,10 @@ const MainRoutes = () => {
                 '/icons/tabler-icons',
                 '/icons/material-icons',
 
+                '/profile/assesments',
+                '/profile/settings',
+                '/profile/reports',
+
                 '/sample-page'
             ]}
         >
@@ -48,6 +60,11 @@ const MainRoutes = () => {
                         <Route path="/utils/util-shadow" component={UtilsShadow} />
                         <Route path="/icons/tabler-icons" component={UtilsTablerIcons} />
                         <Route path="/icons/material-icons" component={UtilsMaterialIcons} />
+
+
+                        <Route path="/profile/settings" component={UtilsTypography} />
+                        <Route path="/profile/assesments" component={Assesment} />
+                        <Route path="/profile/reports" component={Report} />
 
                         <Route path="/sample-page" component={SamplePage} />
                     </AuthGuard>

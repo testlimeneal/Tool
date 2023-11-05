@@ -28,19 +28,32 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env('SECRET_KEY', default='insecure-S#perS3crEt_007')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
 
-try:
-    # expects 1 or 0
-    DEBUG = int(os.environ.get("DEBUG", default=0))
-except:
-    DEBUG = False
+# try:
+#     # expects 1 or 0
+#     DEBUG = int(os.environ.get("DEBUG", default=0))
+# except:
+#     DEBUG = False
+
+DEBUG = True
+STATIC_ROOT = ''
+
+STATIC_URL = '/static/'
+
+STATICFILES_DIRS = ('static',)
+
+# DEBUG = False
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 ALLOWED_HOSTS = env("DJANGO_ALLOWED_HOSTS", default="*").split(" ")
 
 # Application definition
 
 INSTALLED_APPS = [
+    "jet",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -50,6 +63,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "rest_framework",
     "api",
+    "api.assessment",
     "api.user",
     "api.authentication",
 ]
@@ -133,7 +147,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = "/static/"
+# PROJECT_ROOT = os.path.normpath(os.path.dirname(__file__))
+
+# STATIC_ROOT = '//'
+# STATIC_URL = "/static/"
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# STATIC_ROOT=os.path.join(BASE_DIR, "staticfiles")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

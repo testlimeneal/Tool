@@ -215,16 +215,16 @@ const ProfileSection = () => {
                                     <CardContent className={classes.cardContent}>
                                         <Grid container direction="column" spacing={0}>
                                             <Grid item className={classes.flex}>
-                                                <Typography variant="h4">Good Morning,</Typography>
+                                                <Typography variant="h4">👋Good Morning,</Typography>
                                                 <Typography component="span" variant="h4" className={classes.name}>
-                                                    John
+                                                    Anuj Patil
                                                 </Typography>
                                             </Grid>
                                             <Grid item>
                                                 <Typography variant="subtitle2">Project Admin</Typography>
                                             </Grid>
                                         </Grid>
-                                        <OutlinedInput
+                                        {/* <OutlinedInput
                                             className={classes.searchControl}
                                             id="input-search-profile"
                                             value={value}
@@ -239,12 +239,12 @@ const ProfileSection = () => {
                                             inputProps={{
                                                 'aria-label': 'weight'
                                             }}
-                                        />
-                                        <Divider />
+                                        /> */}
+                                        {/* <Divider /> */}
                                         <PerfectScrollbar className={classes.ScrollHeight}>
-                                            <UpgradePlanCard />
-                                            <Divider />
-                                            <Card className={classes.card}>
+                                            {/* <UpgradePlanCard /> */}
+                                            {/* <Divider /> */}
+                                            {/* <Card className={classes.card}>
                                                 <CardContent>
                                                     <Grid container spacing={3} direction="column">
                                                         <Grid item>
@@ -280,8 +280,8 @@ const ProfileSection = () => {
                                                         </Grid>
                                                     </Grid>
                                                 </CardContent>
-                                            </Card>
-                                            <Divider />
+                                            </Card> */}
+                                            {/* <Divider /> */}
                                             <List component="nav" className={classes.navContainer}>
                                                 <ListItemButton
                                                     className={classes.listItem}
